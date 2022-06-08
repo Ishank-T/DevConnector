@@ -1,3 +1,4 @@
 {
-    "MONGOURI" : "mongodb+srv://ishank:ishank13@cluster0.fvhjb.mongodb.net/?retryWrites=true&w=majority"
+    "MONGOURI" : "mongodb+srv://ishank:ishank13@cluster0.fvhjb.mongodb.net/?retryWrites=true&w=majority",
+    "jwtToken" : "123"
 }

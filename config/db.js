@@ -5,7 +5,9 @@ const db = config.get('MONGOURI');
 
 const connectDB = async()=>{
     try{
-        await mongoose.connect(db);
+        await mongoose.connect(db,{
+            
+        });
 
         console.log("Connected to MongoDB...");
     }catch(err){
