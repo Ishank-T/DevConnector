@@ -8,9 +8,15 @@ import Register from "./components/auth/Register";
 import Alert from './components/layout/Alert';
 import setAuthToken from './utils/setAuthToken';
 import {loadUser} from './actions/auth';
+import Dashboard from './components/dashboard/Dashboard';
+import PrivateRoute from "./components/routing/PrivateRoute";
+import ProfileForm from "./components/profile-forms/ProfileForm";
+import AddExperience from "./components/profile-forms/AddExperience";
+import AddEducation from "./components/profile-forms/AddEducation";
 //Redux
 import { Provider } from "react-redux";
 import store from "./store";
+
 
 const App = () => {
   
@@ -45,6 +51,51 @@ const App = () => {
                 <section className="container">
                   <Register />
                 </section>
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <section className="container">
+                  <PrivateRoute component={Dashboard}/>
+                </section>
+
+              }
+            />
+            <Route
+              path="/create-profile"
+              element={
+                <section className="container">
+                  <PrivateRoute component={ProfileForm}/>
+                </section>
+
+              }
+            />
+            <Route
+              path="/edit-profile"
+              element={
+                <section className="container">
+                  <PrivateRoute component={ProfileForm}/>
+                </section>
+
+              }
+            />
+             <Route
+              path="/add-experience"
+              element={
+                <section className="container">
+                  <PrivateRoute component={AddExperience}/>
+                </section>
+
+              }
+            />
+             <Route
+              path="/add-education"
+              element={
+                <section className="container">
+                  <PrivateRoute component={AddEducation}/>
+                </section>
+
               }
             />
           </Routes>
