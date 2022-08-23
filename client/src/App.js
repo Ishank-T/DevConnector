@@ -8,6 +8,8 @@ import Register from "./components/auth/Register";
 import Alert from './components/layout/Alert';
 import setAuthToken from './utils/setAuthToken';
 import {loadUser} from './actions/auth';
+import Profiles from "./components/profiles/Profiles";
+import Profile from './components/profile/Profile';
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from "./components/routing/PrivateRoute";
 import ProfileForm from "./components/profile-forms/ProfileForm";
@@ -50,6 +52,22 @@ const App = () => {
               element={
                 <section className="container">
                   <Register />
+                </section>
+              }
+            />
+             <Route
+              path="/profiles"
+              element={
+                <section className="container">
+                  <Profiles/>
+                </section>
+              }
+            />
+            <Route
+              path="/profile/:id"
+              element={
+                <section className="container">
+                  <Profile/>
                 </section>
               }
             />

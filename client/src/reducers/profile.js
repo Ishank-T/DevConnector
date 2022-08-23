@@ -1,7 +1,10 @@
 import {
     PROFILE_SUCCESS,
+    UPDATE_PROFILE,
     PROFILE_ERROR,
-    CLEAR_PROFILE
+    CLEAR_PROFILE,
+    GET_PROFILES,
+    GET_REPOS
 }from '../actions/types';
 
 
@@ -17,10 +20,17 @@ function profileReducer(state=initialState,action){
     const {type,payload}=action;
 
     switch(type){
+        case UPDATE_PROFILE:
         case PROFILE_SUCCESS:
             return{
                 ...state,
                 profile:payload,
+                loading:false
+            }
+        case GET_PROFILES:
+            return{
+                ...state,
+                profiles:payload,
                 loading:false
             }
         case PROFILE_ERROR:
@@ -35,6 +45,12 @@ function profileReducer(state=initialState,action){
                 ...state,
                 profile:null,
                 repo:[],
+                loading:false
+            }
+        case GET_REPOS:
+            return{
+                ...state,
+                repo:payload,
                 loading:false
             }
         default:
