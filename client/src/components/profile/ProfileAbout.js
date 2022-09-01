@@ -11,7 +11,7 @@ const ProfileAbout = ({profile:{
         {bio? (<Fragment>
             <h2 class="text-primary">{name.trim().split(' ')[0]}'s Bio</h2>
             <p>{bio}</p>
-        </Fragment>):null}.trim().split(' ')[0]
+        </Fragment>):null}
           <div class="line"></div>
           <h2 class="text-primary">Skill Set</h2>
           <div class="skills">

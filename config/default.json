@@ -1,6 +1,6 @@
 {
     "MONGOURI" : "mongodb+srv://ishank:ishank13@cluster0.fvhjb.mongodb.net/?retryWrites=true&w=majority",
     "jwtToken" : "123",
-    "githubClient" : "1c8f0915f50f40f4f067",
+    "githubClientId" : "1c8f0915f50f40f4f067",
     "githubSecret" : "853573f6319fa8c9dc2b9225c310edbe3a8b408e"
 }

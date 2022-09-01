@@ -15,6 +15,8 @@ import PrivateRoute from "./components/routing/PrivateRoute";
 import ProfileForm from "./components/profile-forms/ProfileForm";
 import AddExperience from "./components/profile-forms/AddExperience";
 import AddEducation from "./components/profile-forms/AddEducation";
+import  Posts from "./components/posts/Posts";
+import Post from "./components/post/Post";
 //Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -112,6 +114,24 @@ const App = () => {
               element={
                 <section className="container">
                   <PrivateRoute component={AddEducation}/>
+                </section>
+
+              }
+            />
+             <Route
+              path="/posts"
+              element={
+                <section className="container">
+                  <PrivateRoute component={Posts}/>
+                </section>
+
+              }
+            />
+            <Route
+              path="/posts/:id"
+              element={
+                <section className="container">
+                  <PrivateRoute component={Post}/>
                 </section>
 
               }
