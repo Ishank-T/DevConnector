@@ -50,9 +50,9 @@ const Profile = ({getProfileById,profile:{profile, loading},auth}) => {
                         <h4>No education credentials</h4>
                         )}
                 </div>
-                {/* {profile.githubusername ? (
+                {profile.githubusername ? (
               <ProfileGithub username={profile.githubusername} />
-            ):null} */}
+            ):null}
             </div>
         </Fragment>)}
     </Fragment>
